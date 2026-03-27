@@ -313,6 +313,27 @@ const nav = document.querySelector('nav');
 toggle.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
+
+document.querySelector("form").addEventListener("submit", function(e){
+  const ngWords = ["死ね", "バカ", "詐欺", "クズ", "消えろ"];
+
+  // フォーム内のすべての入力値（inputとtextarea）を取得して連結
+  const formData = new FormData(e.target);
+  let allText = "";
+  for (let value of formData.values()) {
+    allText += value;
+  }
+
+  // NGワードチェック
+  for(let word of ngWords){
+    if(allText.includes(word)){
+      alert("不適切な内容が含まれているため送信できません。");
+      e.preventDefault();
+      return;
+    }
+  }
+});
+
 </script>
 
 </body>
