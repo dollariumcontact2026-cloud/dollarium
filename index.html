@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dollarium｜Obitsu30ドール服ギャラリー</title>
+<meta name="description" content="Obitsu30ドールボディ向けのハンドメイドドール服ギャラリー。リアルで洗練されたスタイリングを紹介します。">
+
+<style>
+/* ===== Reset ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; line-height: 1.7; color: #111; }
+img { width: 100%; display: block; }
+
+/* ===== Common ===== */
+section { padding: 80px 6%; }
+h1, h2, h3 { font-weight: 600; margin-bottom: 16px; }
+p { max-width: 720px; }
+a { color: inherit; text-decoration: none; }
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 6%;
+}
+.logo img {
+  height: 48px;
+  max-width: 100%;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+nav a { font-size: 14px; }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #111;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+
+  .header-inner {
+    padding: 10px 5%;
+  }
+
+  .logo img {
+    height: 36px;   /* SP用に少し小さく */
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 16px;
+    text-align: center;
+  }
+
+  nav.active {
+    display: block;
+  }
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding-top: 140px;
+  text-align: center;
+}
+.hero img {
+  max-width: 960px;
+  margin: 40px auto 0;
+}
+
+/* ===== About ===== */
+.about p { margin-top: 12px; }
+
+/* ===== Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+.card p { margin-top: 8px; font-size: 14px; }
+
+/* ===== Contact ===== */
+.contact form {
+  max-width: 480px;
+  margin-top: 32px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+}
+.contact button {
+  padding: 10px 24px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+footer p {
+  margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Dollarium">
+      </div>
+
+      <!-- ハンバーガーボタン（SP用） -->
+      <button class="menu-toggle" aria-label="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#fashion">Fashion</a></li>
+          <li><a href="#Item">Item</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <h1>Doll Clothes for Obitsu30</h1>
+  <p>リアルなシルエットのドールファッション。</p>
+  <img src="images/hero_main.jpg" alt="Obitsu30 ドール服">
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <h2>About</h2>
+  <p>
+  Dollariumは、Obitsu30ドールボディ向けに制作した
+  ハンドメイドドール服を紹介するギャラリーサイトです。<br>
+  今後は制作過程やスタイリング提案、型紙・作品の展開なども視野に入れ、
+  ドールファッションの楽しみをより広く共有していきます。
+</p>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/photo1.jpg" alt="">
+      <p>Side_sitting_left</p>
+    </div>
+    <div class="card">
+      <img src="images/photo2.jpg" alt="">
+      <p>Front_sitting</p>
+    </div>
+    <div class="card">
+      <img src="images/photo3.jpg" alt="">
+      <p>Side_sitting_right</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fashion -->
+<section id="fashion">
+  <h2>Fashion</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/fashion1.jpg" alt="">
+      <p>Side_standing</p>
+    </div>
+    <div class="card">
+      <img src="images/fashion2.jpg" alt="">
+      <p>Front_standing</p>
+    </div>
+    <div class="card">
+      <img src="images/fashion3.jpg" alt="">
+      <p>Back_standing</p>
+    </div>
+  </div>
+</section>
+
+<!-- Item -->
+<section id="Item">
+  <h2>Item</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/item1.jpg" alt="">
+      <p>Shirt</p>
+    </div>
+    <div class="card">
+      <img src="images/item2.jpg" alt="">
+      <p>Blazer</p>
+    </div>
+    <div class="card">
+      <img src="images/item3.jpg" alt="">
+      <p>Pants</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>ご質問・ご感想などお気軽にどうぞ。</p>
+  <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xnjojaly"
+  method="POST"
+>
+  <label>
+    メールアドレス:
+    <input type="email" name="email">
+  </label>
+  <label>
+    メッセージ:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">送信</button>
+</form>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Dollarium</p>
+</footer>
+
+<script>
+/* スムーススクロール */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+
+    /* SPではメニューを閉じる */
+    document.querySelector('nav').classList.remove('active');
+  });
+});
+
+/* ハンバーガーメニュー */
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
