@@ -214,15 +214,15 @@ footer p {
   <div class="grid">
     <div class="card">
       <img src="images/photo1.jpg" alt="">
-      <p>Side_sitting_left</p>
+      <p>sitting in the living room</p>
     </div>
     <div class="card">
       <img src="images/photo2.jpg" alt="">
-      <p>Front_sitting</p>
+      <p>standing at the park</p>
     </div>
     <div class="card">
       <img src="images/photo3.jpg" alt="">
-      <p>Side_sitting_right</p>
+      <p>sitting on the arm of the sofa</p>
     </div>
   </div>
 </section>
@@ -233,15 +233,15 @@ footer p {
   <div class="grid">
     <div class="card">
       <img src="images/fashion1.jpg" alt="">
-      <p>Side_standing</p>
+      <p>Front</p>
     </div>
     <div class="card">
       <img src="images/fashion2.jpg" alt="">
-      <p>Front_standing</p>
+      <p>Side</p>
     </div>
     <div class="card">
       <img src="images/fashion3.jpg" alt="">
-      <p>Back_standing</p>
+      <p>Back</p>
     </div>
   </div>
 </section>
@@ -260,7 +260,7 @@ footer p {
     </div>
     <div class="card">
       <img src="images/item3.jpg" alt="">
-      <p>Pants</p>
+      <p>Once-washed open-collar shirt</p>
     </div>
   </div>
 </section>
@@ -268,7 +268,8 @@ footer p {
 <!-- Contact -->
 <section class="contact" id="contact">
   <h2>Contact</h2>
-  <p>ご質問・ご感想などお気軽にどうぞ。</p>
+  <p>ご質問・ご感想などお気軽にどうぞ。<br>
+  ※誹謗中傷・営業・スパム等の内容には返信いたしかねます。</p>
   <!-- modify this form HTML and place wherever you want your form -->
 <form
   action="https://formspree.io/f/xnjojaly"
@@ -333,6 +334,26 @@ document.querySelector("form").addEventListener("submit", function(e){
     }
   }
 });
+
+function checkNgWords(e) {
+  const ngWords = ["死ね", "バカ", "詐欺", "クズ", "消えろ"];
+
+  // フォーム内の全テキストを取得（inputもtextareaも含む）
+  const formData = new FormData(e.target);
+  let allText = "";
+  for (let value of formData.values()) {
+    allText += value;
+  }
+
+  for(let word of ngWords){
+    if(allText.includes(word)){
+      alert("不適切な内容が含まれているため送信できません。");
+      e.preventDefault();
+      return false; // 送信を中止
+    }
+  }
+  return true; // 問題なければ送信
+}
 
 </script>
 
